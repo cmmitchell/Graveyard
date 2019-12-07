@@ -64,11 +64,12 @@
 			
 			
 			//calling geo JASON and embeded styles from javascript
-				var a = L.geoJson(points, {
-					style: pointcol,
-					onEachFeature: function (feature, layer){popupOptions = {color: "#5D6D7E", maxWidth: 250};
-					layer.bindPopup("<b>Location:</b> " + feature.properties.Name,popupOptions);
-					}
+				var a = L.geoJson(graveloc, {
+					style: GraveCol
+					})
+				
+					b = L.geoJson(gravesharp, {
+					style: GraveCol
 					})
 					
 	//===============================Layer Groups=======================================
@@ -78,8 +79,8 @@
 				//===================================================
 				
 					//=================background=================
-				var aShp = L.layerGroup([a]);
-				
+				var aShp = L.layerGroup([a]),
+				bShp = L.layerGroup([b]);
 				//background images
 				
 				var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -195,7 +196,8 @@
 							groupName : "Layers",
 							expanded  : true,
 							layers    : { 
-								"Point":aShp
+								"Point":aShp,
+								"Point 2":bShp
 							}	
 						 }							 
 				];
