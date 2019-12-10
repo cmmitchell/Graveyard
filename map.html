@@ -31,7 +31,6 @@
 		<!-- GeoJSON overlays -->
 		<script type="text/javascript" src="https://cmmitchell.github.io/Graveyard/Data/GraveSharp1.js"></script>
 		<script type="text/javascript" src="https://cmmitchell.github.io/Graveyard/Data/Local1.js"></script>
-		<script type="text/javascript" src="https://cmmitchell.github.io/Locations/Location/Shapefile/leaflet-bing-layer.js"></script>
 
 		<!-- Broken Stuff -->
 
@@ -92,10 +91,6 @@
 				attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 				});
 				
-				var BING_KEY = 'AnoeM3MMiLwsSc-goBaMU7setahLtvnyjZJrSomUejOJVJU33az0Il4UvyMML5rK'
-				var bingLayer = L.tileLayer.bing(BING_KEY, {
-				maxZoom: 20
-				});
 				
 				var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 				maxZoom: 19,
@@ -178,8 +173,7 @@
 								"Outdoors": Thunderforest_Outdoors,
 								"Neighbourhood": Thunderforest_Neighbourhood,
 								"ESRI Imagery": Esri_WorldImagery,
-								"ESRI Street Map": Esri_WorldStreetMap,
-								"Bing": bingLayer
+								"ESRI Street Map": Esri_WorldStreetMap
 								
 							}
 					
